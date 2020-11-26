@@ -1,8 +1,8 @@
 <div class="common-icon-card" @click="selectedIcon()">
     <div class="common-icon-card-in">
         <div class="common-icon-card-svg">
-            <span v-if="copyTextPrefix" :class="copyTextPrefix + icon.iconName"></span>
-            <span v-else v-html="icon.iconContent"></span>
+            <!-- <span v-if="copyTextPrefix" :class="copyTextPrefix + icon.iconName"></span> -->
+            <span v-html="icon.iconContent"></span>
         </div>
         <span class="common-icon-card-name" title="bulb" v-if="!isEdit">{{ icon.iconName }}</span>
         <i-input @on-blur="editIcon" :autofocus="isEdit" v-model="icon.iconName" size="small" class="edit-name" v-else></i-input>
